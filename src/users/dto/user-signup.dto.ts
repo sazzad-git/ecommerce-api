@@ -1,15 +1,8 @@
-import { IsEmail, IsNotEmpty, IsString, MinLength } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
+import { UserSignInDto } from './user-signin.dto';
 
-export class UserSignupDto {
+export class UserSignupDto extends UserSignInDto {
   @IsNotEmpty()
   @IsString()
-  name!: string;
-
-  @IsNotEmpty()
-  @IsEmail()
-  email!: string;
-
-  @IsNotEmpty()
-  @MinLength(6)
-  password!: string;
+  name: string;
 }
