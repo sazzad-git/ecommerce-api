@@ -23,7 +23,7 @@ export class UsersController {
   }
 
   @Get('all')
-  async findAll() {
+  async findAll(): Promise<UserEntity[]> {
     return await this.usersService.findAll();
   }
 
