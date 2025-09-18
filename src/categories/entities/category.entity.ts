@@ -20,10 +20,10 @@ export class CategoryEntity {
   description: string;
 
   @CreateDateColumn()
-  createAt: Timestamp;
+  createAt: Date;
 
   @CreateDateColumn()
-  updatedAt: Timestamp;
+  updatedAt: Date;
 
   @ManyToOne(() => UserEntity, (user) => user.categories)
   addedBy: UserEntity;
